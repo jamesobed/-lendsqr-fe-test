@@ -1,0 +1,213 @@
+@import "./variables";
+
+.login_body {
+  @include flexContent(center, row);
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  background: $backgroundColor;
+  @media (max-width: 767px) {
+      @include flexContent(center, column);
+  }
+  .logo_container {
+    @include flexContent(flex-start, row);
+    position: absolute;
+    width: 24.75px;
+    height: 25px;
+    left: 97px;
+    top: 107.67px;
+    .logo {
+      margin-right: 0.5rem;
+    }
+  }
+  .login_left {
+    position: absolute;
+    width: 600px;
+    height: 337.57px;
+    left: 67px;
+    top: 281px;
+    @media (max-width: 400px) {
+        top: 200px;
+        width: 500px;
+        height: 300px;
+    }
+    .login_graphic{
+        width: 100%;
+height: 100%;
+        & > .loginGraphic{
+            width: 100%;
+            height: 100%;
+            @media (max-width: 600px) {
+                width: 80%;
+            height: 80%;
+            }
+            @media (max-width: 400px) {
+                width: 60%;
+            height: 60%;
+            }
+        }
+    }
+  }
+  .login-right {
+    @include gridCenter();
+    position: absolute;
+    width: 704px;
+    height: 900px;
+    left: 736px;
+    top: -5px;
+    background: #ffffff;
+    box-shadow: 0px 15px 90px rgba(0, 0, 0, 0.03);
+    @media (max-width: 767px) {
+        @include flexContent(center, column);
+        left: 0;
+        top: 38rem;
+    }
+    @media (max-width: 400px) {
+        @include flexContent(center, column);
+        text-align: center;
+        left: 0;
+        top: 27rem;
+        width: 600px;
+    height: 800px;
+    }
+    &_content {
+      margin-top: -12rem;
+      @media (max-width: 400px) {
+        text-align: center;
+        margin-top: -1rem;
+        width: 500px;
+    height: 800px;
+    }
+      .title {
+        position: relative;
+        width: 183px;
+        height: 55px;
+        font-family: "Avenir Next";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 55px;
+        letter-spacing: -0.04em;
+        color: #213f7d;
+        text-transform: capitalize;
+        @media (max-width: 600px) {
+            font-size: 30px;
+        }
+        @media (max-width: 400px) {
+            text-align: center;
+        }
+      }
+      .details {
+        position: relative;
+        width: max-content;
+        height: 28px;
+        margin: 10px 0px 60px;
+        font-family: "Avenir Next";
+        text-transform: capitalize;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 27px;
+        color: #545f7d;
+        @media (max-width: 600px) {
+            font-size: 16px;
+        }
+        @media (max-width: 400px) {
+            text-align: center;
+            margin-left: 1rem;
+        }
+      }
+      .form-container {
+        &_inputBox {
+          & > .single_input {
+            @include flexContent(flex-start, row);
+            box-sizing: border-box;
+            position: relative;
+            width: 447px;
+            height: 50px;
+            background: #ffffff;
+            border: 2px solid rgba(84, 95, 125, 0.15);
+            border-radius: 5px;
+            margin-bottom: 24px;
+            padding: 0rem 1rem;
+            @media (max-width: 600px) {
+                width: 350px;
+                height: 50px;
+            }
+            @media (max-width: 400px) {
+                width: 300px;
+                height: 40px;
+            }
+            &.password {
+              @include flexContent(space-between, row);
+              .show {
+                color: $primaryColor;
+                width: 49.41px;
+                height: 12.5px;
+                font-family: "Avenir Next";
+                font-style: normal;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 16px;
+                text-align: center;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                &:hover {
+                  color: darken($primaryColor, 10%);
+                  cursor: pointer;
+                }
+              }
+            }
+            .input_item {
+              border: none;
+              width: 100%;
+              height: 100%;
+              &:focus {
+                outline: none;
+              }
+            }
+          }
+        }
+        &_forgotPasswordText {
+          width: 147px;
+          height: 17px;
+          font-family: "Avenir Next";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 16px;
+          text-align: right;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: $primaryColor;
+          margin: 30px 0px;
+        }
+        &_loginBtn {
+          width: 100%;
+          height: 48px;
+          text-transform: uppercase;
+          bottom: 32.11%;
+          background: $primaryColor;
+          border-radius: 8px;
+          border: none;
+          color: $white;
+          @media (max-width: 400px) {
+            position: relative;
+            width: 60%;
+          height: 40px;
+          left: -6rem;
+        }
+          &:hover {
+            background: darken($primaryColor, 5%);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

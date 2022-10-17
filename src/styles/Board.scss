@@ -1,0 +1,235 @@
+@import "./variables";
+
+.board-container{
+    position: absolute;
+    top: 23rem;
+    box-sizing: border-box;
+width: 1037px;
+height: 740px;
+overflow-y: hidden;
+left: 347px;
+background: #FFFFFF;
+border: 1px solid rgba(33, 63, 125, 0.06);
+box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+border-radius: 4px;
+&_headerList{
+    @include flexContent(space-between, row);
+    padding: 1.5rem;
+}
+&_customersDetails{
+    @include flexContent(space-between, row);
+    padding: 0.5rem 1.5rem;
+    .text{
+height: 17px;
+top: 510px;
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+color: #545F7D;
+    }
+}
+&_pagination{
+    @include flexContent(space-between, row);
+    position: absolute;
+    bottom: -23rem;
+    left: 22rem;
+    width: 1037px;
+    z-index: 99999;
+    .left{
+        @include flexContent(space-between, row);
+        width: 12rem;
+.text{
+    font-family: 'Work Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+color: $greyishBlue;
+text-transform: capitalize;
+option{
+    color: #213F7D;
+}
+}
+.select{
+    background: rgba(33, 63, 125, 0.1);
+border-radius: 4px;
+border: none;
+padding: 0.2rem 0.5rem;
+}
+    }
+    .right{
+        @include flexContent(space-between, row);
+        width: 12rem;
+        &_pageBtn{
+            border: none;
+            font-family: 'Work Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+color: $greyishBlue;
+opacity: 0.6;
+&.icon{
+    @include flexContent(center, row);
+    color: $greyishBlue;
+    opacity: 1;
+    background: rgba(33, 63, 125, 0.1);
+border-radius: 4px;
+padding: 5px 7px;
+}
+        }
+    }
+}
+}
+
+.singleItem{
+    @include flexContent(center, row);
+    width: max-content;
+    .title{
+        margin-right: 0.5rem;
+height: 15px;
+left: 373px;
+top: 458px;
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 14px;
+display: flex;
+align-items: flex-end;
+text-transform: uppercase;
+color: $greyishBlue;
+    }
+}
+tbody{
+    padding: 10rem;
+    gap: 1rem;
+}
+th{
+    margin: 2rem 0;
+    padding:1rem;
+}
+td {
+    border-bottom: 1px solid rgba(33, 63, 125, 0.1);;
+    padding:1rem;
+    text-align: left;
+    height: 17px;
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+color: #545F7D;
+.statusBtn{
+    padding: 0.3rem;
+    border-radius: 100px;
+    border: none;
+    width: 100%;
+    text-transform: capitalize;
+    &.inactive{
+background: lighten($greyishBlue, 50%);
+color: $greyishBlue;
+    }
+    &.active{
+background: lighten($activeColor, 40%);
+color: $activeColor;
+    }
+    &.pending{
+background: lighten($pendingColor, 50%);
+color: $pendingColor;
+    }
+    &.blacklisted{
+background: lighten($blacklistedColor, 50%);
+color: $blacklistedColor;
+    }
+}
+  }
+
+  .dropdown-menu{
+position: absolute;
+width: 270px;
+height: 600px;
+left: 10px;
+top: 3rem;
+z-index: 10000;
+background: #FFFFFF;
+border: 1px solid rgba(84, 95, 125, 0.14);
+box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+border-radius: 4px;
+padding: 2rem 0rem;
+.form{
+    z-index: 9999;
+    &_group{
+        margin-bottom: 1rem;
+        .labelContainer{
+            @include flexContent(flex-start, row);
+            padding-left: 1.2rem;
+            margin-bottom: 0.5rem;
+            label{
+                width: 70px;
+height: 16px;
+left: 378px;
+top: 600px;
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+color: $greyishBlue;
+text-align: left;
+text-transform: capitalize;
+            }
+        }
+        & > input,  & > select{
+            box-sizing: border-box;
+            width: 230px;
+            height: 40px;
+            left: 378px;
+            top: 540px;
+            background: #FFFFFF;
+            padding: 0rem 1rem;
+            border: 1px solid #213F7D;
+            border-radius: 8px;
+            &::placeholder{
+                text-transform: capitalize
+            }
+            
+        }
+
+    }
+    .btnContainer{
+        @include flexContent(space-between, row);
+        width: 230px;
+        margin: 1rem 0rem 0rem 1.2rem;
+        & > button{
+            width: 98px;
+height: 40px;
+left: 378px;
+top: 1020px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+text-transform: capitalize;
+&.resetBtn{
+    border: 1px solid $greyishBlue;
+    background: $white;
+    &:hover{
+        background: $greyishBlue;
+        color: $white;
+    }
+}
+&.filterBtn{
+    border: 1px solid $primaryColor;
+    background: $primaryColor;
+border-radius: 8px;
+color: $white;
+&:hover{
+    background: darken($primaryColor, 7%);  
+}
+}
+        }
+    }
+}
+  }

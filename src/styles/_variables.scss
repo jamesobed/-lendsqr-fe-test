@@ -1,0 +1,31 @@
+$primaryColor: #39CDCC;
+$textColor: #000;
+$backgroundColor: #FFF;
+$white: #FFF;
+$navyBlue: #213F7D;
+$greyishBlue: #545F7D;
+$pendingColor: #E9B200;
+$activeColor: #39CD62;
+$blacklistedColor: #E4033B;
+$dashboardBackground: rgb(253, 253, 253);
+$iconColor: #213F7D;
+$borderLineColor: #E5E5E5;;
+
+@mixin  flexContent($justifyContent, $flexDirection) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: center; 
+    flex-direction: $flexDirection;
+}
+@mixin  gridCenter() {
+    display: grid;
+    place-content: center;
+}
+@mixin iconStyle {
+    margin-left: 0.5rem;
+        font-style: normal;
+       font-weight: 400;
+       font-size: 16px;
+       line-height: 19px;
+       color: $iconColor;
+}

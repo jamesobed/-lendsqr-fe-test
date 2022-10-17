@@ -1,0 +1,348 @@
+@import "./variables";
+
+.backToUsers {
+  @include flexContent(space-between, row);
+  width: 9rem;
+  position: absolute;
+  height: 19px;
+  left: 343px;
+  top: 165px;
+  &_text {
+    height: 19px;
+    left: 386px;
+    top: 165px;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $greyishBlue;
+  }
+}
+
+.userdetails {
+  @include flexContent(space-between, row);
+  position: absolute;
+  width: 1037px;
+  height: 28px;
+  left: 343px;
+  top: 216px;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  &_title {
+    width: 143px;
+    height: 28px;
+    left: 343px;
+    top: 216px;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: $navyBlue;
+    text-transform: capitalize;
+  }
+  &_btnContainer {
+    @include flexContent(space-between, row);
+    width: 22rem;
+    button {
+      width: 170px;
+      height: 40px;
+      left: 1020px;
+      top: 210px;
+      border-radius: 8px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      &.blacklistBtn {
+          border: 1px solid $blacklistedColor;
+          font-family: "Work Sans";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 16px;
+          text-align: center;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          cursor: pointer;
+        color: $blacklistedColor;
+        &:hover {
+          background: $blacklistedColor;
+          color: $white;
+        }
+      }
+      &.activateUserBtn {
+        border: 1px solid $primaryColor;
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: $primaryColor;
+        &:hover {
+          background: $primaryColor;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.header-container {
+  @include flexContent(flex-start, row);
+  box-sizing: border-box;
+  position: absolute;
+  width: 1037px;
+  height: 210px;
+  left: 343px;
+  top: 290px;
+  background: #ffffff;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  padding: 0px 2rem;
+  .userImageName {
+    @include flexContent(space-between, row);
+    width: 16rem;
+    .name-details {
+      .name {
+        width: max-content;
+        height: 26px;
+        left: 493px;
+        top: 345px;
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 26px;
+        color: $navyBlue;
+        text-transform: capitalize;
+      }
+      .acctNumber {
+        height: 16px;
+        left: 493px;
+        top: 379px;
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: $greyishBlue;
+      }
+    }
+  }
+  .rating {
+    @include flexContent(space-between, column);
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    padding: 1rem;
+    margin: 0rem 1rem;
+    &_title {
+      width: 73px;
+      height: 16px;
+      left: 693px;
+      top: 349px;
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: $greyishBlue;
+    }
+  }
+  .accountDetails {
+    @include flexContent(flex-start, column);
+    height: 3rem;
+    .amount {
+      width: 137px;
+      height: 23px;
+      left: 826px;
+      top: 344px;
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 26px;
+      color: $navyBlue;
+      margin-left: -1.5rem;
+    }
+    .bankname {
+      width: 157px;
+      height: 14px;
+      left: 829px;
+      top: 379px;
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      color: #213f7d;
+    }
+  }
+
+  .list_items {
+    @include flexContent(space-between, row);
+    width: 60rem;
+    position: absolute;
+    bottom: 0.5rem;
+    list-style: none;
+    text-transform: capitalize;
+    z-index: 10000;
+    .items{
+      cursor: pointer;
+      &:hover{
+        color: $primaryColor;
+      }
+      &.active{
+        color: $primaryColor;
+        width: 130px;
+        height: 19px;
+        left: 404px;
+        top: 471px;
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+       &::after{
+        display: block;
+        content: "";
+        position: relative;
+        top: 0.25rem;
+width: 100%;
+border: 2px solid $primaryColor;
+       }
+            }
+    }
+  }
+}
+
+.details-container{
+  box-sizing: border-box;
+position: absolute;
+width: 1037px;
+height: max-content;
+left: 343px;
+top: 530px;
+background: #FFFFFF;
+border: 1px solid rgba(33, 63, 125, 0.06);
+box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+border-radius: 4px;
+padding: 1rem;
+&_personalInfo{
+  @include flexContent(center, column);
+  align-items: flex-start;
+  padding: 2rem 0rem;
+  width: 100%;
+  border-bottom: 1px solid $borderLineColor;
+  &.social{
+    width: 70%;
+  }
+  &:last-child{
+    border-bottom: 1px solid transparent;
+  }
+  .heading{
+width: max-content;
+height: 19px;
+left: 373px;
+top: 560px;
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+text-transform: capitalize;
+color: $navyBlue;
+  }
+  .contentA{
+    @include flexContent(space-between, row);
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    &-item{
+      @include flexContent(space-between, column);
+      height: 2.5rem;
+      text-align: left;
+      margin-right: auto;
+.title{
+  width: 100%;
+height: 14px;
+left: 373px;
+top: 609px;
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+text-transform: uppercase;
+color: $greyishBlue;
+}
+.name{
+height: 19px;
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+color: $greyishBlue;
+text-transform: capitalize;
+margin-right: auto;
+&.email{
+  text-transform: lowercase;
+}
+}
+    }
+  }
+  .contentB{
+    @include flexContent(space-between, row);
+    width: 60%;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    &.fix{
+      width: 53%;
+    }
+    &-item{
+      @include flexContent(space-between, column);
+      text-align: left;
+      height: 2.5rem;
+  
+.title{
+  width: 100%;
+height: 14px;
+left: 373px;
+top: 609px;
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+text-transform: uppercase;
+color: $greyishBlue;
+}
+.name{
+height: 19px;
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+color: $greyishBlue;
+text-transform: capitalize;
+margin-right: auto;
+&.email{
+  text-transform: lowercase;
+}
+}
+    }
+  }
+
+
+}
+}

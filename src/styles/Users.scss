@@ -1,0 +1,66 @@
+@import "./variables";
+
+.users-body{
+    position: absolute;
+    left: 21.75rem;
+    top: 7rem;
+    .title{
+width: 66px;
+height: 28px;
+left: 343px;
+top: 160px;
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+color: $navyBlue;
+margin-bottom: 2rem;
+text-transform: capitalize;
+    }
+    &_states{
+        width: 1037px;
+      @include flexContent(space-between, row);
+    }
+}
+
+.singleState{
+box-sizing: border-box;
+width: 240px;
+height: 160px;
+left: 343px;
+top: 228px;
+background: #FFFFFF;
+border: 1px solid rgba(33, 63, 125, 0.06);
+box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+border-radius: 4px;
+text-align: left;
+padding:1.5rem 2rem;
+.text{
+width: max-content;
+height: 16px;
+left: 373px;
+top: 302px;
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+text-transform: uppercase;
+color: $greyishBlue;
+margin: 0.5rem 0rem;
+}
+.pop{
+width: 65px;
+height: 28px;
+left: 373px;
+top: 330px;
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 28px;
+text-transform: uppercase;
+color: $navyBlue;
+}
+}

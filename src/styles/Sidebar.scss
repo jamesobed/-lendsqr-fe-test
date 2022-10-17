@@ -1,0 +1,58 @@
+@import "./variables";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500;700&family=Mulish:wght@600&family=Work+Sans:wght@300;400;500;700&display=swap');
+
+.sidebar{
+@include gridCenter();
+position: absolute;
+width: 283px;
+height: max-content;
+left: 0px;
+top: 5rem;
+bottom: -121px;
+background: #FFFFFF;
+z-index: -999;
+box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+padding: 1rem;
+cursor: pointer;
+&_iconLabel{
+    @include flexContent(flex-start, row);
+    margin: 2rem 0rem;
+    &:hover{
+        cursor: pointer;
+        width: 100%;
+        padding: 0.5rem;
+background: lighten($primaryColor, 45%);
+color: $primaryColor,;
+    }
+    .text{
+       @include iconStyle; 
+       color: #545F7D;
+       font-family: 'Work Sans', sans-serif;
+       font-style: normal;
+       font-weight: 400;
+       font-size: 13px;
+       line-height: 19px;
+       text-transform: capitalize;
+       cursor: pointer;
+    //    opacity: 0.5;
+    }
+}
+&_customers, &_businesses, &_settings{
+    .title{
+        width: 75px;
+height: 14px;
+left: 30px;
+top: 270px;
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 14px;
+color: $greyishBlue;
+text-transform: uppercase;
+margin-bottom: -1rem;
+    }
+}
+}
+
+

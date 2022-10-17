@@ -1,0 +1,82 @@
+@import "./variables";
+
+.navbar{
+    @include flexContent(space-between, row);
+    position: relative;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    padding: 1rem;
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+    z-index: 9999;
+    background-color: $white;
+    &_logoContainer{
+        @include flexContent(space-between, row);
+        width: 9rem;
+    }
+    &_searchContainer{
+    @include flexContent(space-between, row);
+    position: relative;
+    box-sizing: border-box;
+background: $white;
+opacity: 0.2;
+border: 1px solid $navyBlue;
+border-right-color: transparent;
+border-radius: 8px;
+width: 20rem;
+padding:0.5rem;
+z-index: 33;
+.input{
+    border: none;
+    font-family: 'Work Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+color: $greyishBlue;
+opacity: 0.7;
+}
+.search-icon{
+    @include flexContent(center, row);
+    position: absolute;
+    z-index: 333;
+    top: 0;
+    right: 0;
+    width: 2rem;
+    height: 2rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+background: $primaryColor;
+.icon{
+    color: $white;
+    cursor: pointer;
+}
+}
+}
+&_userNotification{
+    @include flexContent(space-between, row);
+    width: 12rem;
+    .docs{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+text-decoration-line: underline;
+text-transform: capitalize;
+color: $navyBlue;
+    }
+   .image{
+    border-radius: 50%;
+   }
+   .name{
+    font-family: 'Work Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+color: $navyBlue;
+   }
+}
+}
